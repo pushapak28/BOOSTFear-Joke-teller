@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #45BADD;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* https://media.giphy.com/media/3og0IUzdgwVczU67eg/giphy.gif */
+  background: url('./robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background: #ff3482;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/*  pseduo class */
+button:hover {
+  filter: brightness(105%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+button:disabled{
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* media query */
+@media screen and (max-width:1000px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  button {
+    box-shadow: 2px 2px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+#footer {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding: 15px;
+  bottom: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 10px;
+}
+
+.fa-heart {
+  margin: 3px;
+  color: red;
+}
